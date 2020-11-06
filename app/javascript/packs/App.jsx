@@ -8,6 +8,7 @@ import ReactDOM from 'react-dom'
 import Home from "../pages/Home";
 import About from "../pages/About";
 import Pizzas from "../pages/Pizzas";
+import Form from "../pages/Form";
 
 
 class App extends Component{
@@ -32,6 +33,9 @@ class App extends Component{
                 <li>
                   <Link to="/pizza">Pizza</Link>
                 </li>
+                <li>
+                  <Link to="/form">Form</Link>
+                </li>
               </ul>
             </nav>
             <Switch>
@@ -40,6 +44,9 @@ class App extends Component{
               </Route>
               <Route path={"/pizza"}>
                 <Pizzas pizzaTypes={this.state.pizzaTypes}/>
+              </Route>
+              <Route path="/form">
+                <Form />
               </Route>
               <Route path="/">
                 <Home name={this.state.name} age={this.state.age}/>
